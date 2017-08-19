@@ -9,10 +9,10 @@
 
     <com.dxtt.coolmenu.CoolMenuFrameLayout
         android:id="@+id/rl_main"
-        android:layout_width="368dp"
-        android:layout_height="551dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        app:num="three"
+        app:num="four"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

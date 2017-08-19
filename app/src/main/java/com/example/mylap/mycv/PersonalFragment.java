@@ -72,7 +72,9 @@ public class PersonalFragment extends Fragment {
                     case 0:
                         view = Objective();
                         break;
-
+                    case 1:
+                        view = Education();
+                        break;
                     default:
                         view = Objective();
                         break;
@@ -92,6 +94,7 @@ public class PersonalFragment extends Fragment {
 
     }
 
+
     private void setModels(ArrayList<NavigationTabBar.Model> models) {
 
         final String[] colors = getResources().getStringArray(R.array.default_preview);
@@ -109,7 +112,7 @@ public class PersonalFragment extends Fragment {
                         getResources().getDrawable(R.drawable.ic_second),
                         Color.parseColor(colors[1]))
 //                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
-                        .title("Cup")
+                        .title("Education")
                         .build()
         );
         models.add(
@@ -146,8 +149,19 @@ public class PersonalFragment extends Fragment {
         return view;
     }
 
+
+
+    private View Education() {
+
+        final View view = LayoutInflater.from(
+                getActivity()).inflate(R.layout.education_tab, null, false);
+         return view;
+
+    }
     private String setObjectiveText() {
     return getString(R.string.objective);
     }
+
+
 
 }

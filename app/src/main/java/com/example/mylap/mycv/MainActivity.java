@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @SuppressWarnings("unchecked")
     private <T extends View> T $(@IdRes int id) {
         return (T) findViewById(id);
     }

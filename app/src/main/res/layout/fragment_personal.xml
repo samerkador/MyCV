@@ -2,23 +2,181 @@
 <LinearLayout xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:frisson="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mylap.mycv.PersonalFragment"
     android:background="#EAEAEA"
     android:orientation="vertical">
 
-        <android.support.v4.view.ViewPager
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_image_user_personal_photo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            frisson:cardCornerRadius="50dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/my_photo" />
+        </android.support.v7.widget.CardView>
+
+        <com.intrusoft.library.FrissonView
+            android:id="@+id/wave_head"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            frisson:alphaValue="50"
+            frisson:gradientType="radial"
+            frisson:gradient_endColor="#252A3400"
+            frisson:gradient_startColor="#00000000"
+            frisson:src="@drawable/android_app_developer_logo"
+            frisson:tideCount="3"
+            frisson:tideHeight="60dp"
+            frisson:tintColor="#000000" />
+
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cv_image_user_personal_photo"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_toEndOf="@+id/cv_image_user_personal_photo"
+            android:layout_toRightOf="@+id/cv_image_user_personal_photo"
+            android:text="@string/user_name"
+            android:textColor="#EEEEEE"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/txt_user_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txt_user_name"
+            android:layout_alignRight="@+id/txt_user_name"
+            android:layout_below="@+id/txt_user_name"
+            android:layout_marginLeft="21dp"
+            android:layout_toRightOf="@+id/cv_image_user_personal_photo"
+            android:text="@string/user_job"
+            android:textColor="#BBBBBB"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_marginTop="7dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3">
+        <TextView
+            android:textColor="#FF2E63"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:text="+201159550915"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="#aa424242" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3">
+        <TextView
+            android:gravity="center"
+            android:textSize="20dp"
+            android:text="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="#FF2E63"
+            android:layout_weight="0.45"/>
+        <TextView
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="samer.kador.94@gmail.com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="#aa424242" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3">
+        <TextView
+            android:textSize="20dp"
+            android:textColor="#FF2E63"
+            android:text="Addres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"/>
+        <TextView
+            android:layout_marginTop="3dp"
+            android:text="Abd Al Azim Salam st \n Nasr city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
             android:id="@+id/vp_horizontal_ntb"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="2.90"/>
 
         <devlight.io.library.ntb.NavigationTabBar
             android:id="@+id/ntb_horizontal"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#08D9D6"
             app:ntb_bg_color="#252A34"
             app:ntb_scaled="true"
             app:ntb_badge_title_color="#FFFFFF"

@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         titleList = Arrays.asList(titles);
         coolMenuFrameLayout.setTitles(titleList);
 
+
+
         fragments.add(new ProjectFragment());
         fragments.add(new PersonalFragment());
         fragments.add(new ProjectFragment());

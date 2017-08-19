@@ -67,20 +67,41 @@ public class PersonalFragment extends Fragment {
             @Override
             public Object instantiateItem(final ViewGroup container, final int position) {
 
-                return null;
+                View view = null;
+                switch (position){
+                    case 0:
+                        view = Objective();
+                        break;
+
+                    default:
+                        view = Objective();
+                        break;
+                }
+                container.addView(view);
+                return view;
             }
         });
 
-        final String[] colors = getResources().getStringArray(R.array.default_preview);
 
         final NavigationTabBar navigationTabBar =  $(R.id.ntb_horizontal);
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
+        setModels(models);
+
+        navigationTabBar.setModels(models);
+        navigationTabBar.setViewPager(viewPager, 0);
+
+    }
+
+    private void setModels(ArrayList<NavigationTabBar.Model> models) {
+
+        final String[] colors = getResources().getStringArray(R.array.default_preview);
+
         models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.ic_first),
                         Color.parseColor(colors[0]))
                         .selectedIcon(getResources().getDrawable(R.drawable.ic_sixth))
-                        .title("Heart")
+                        .title("Objective")
                         .build()
         );
         models.add(
@@ -108,42 +129,25 @@ public class PersonalFragment extends Fragment {
                         .build()
         );
 
-        navigationTabBar.setModels(models);
-        navigationTabBar.setViewPager(viewPager, 0);
-        navigationTabBar.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(final int position) {
-                navigationTabBar.getModels().get(position);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(final int state) {
-
-            }
-        });
-//
-//        navigationTabBar.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                for (int i = 0; i < navigationTabBar.getModels().size(); i++) {
-//                    final NavigationTabBar.Model model = navigationTabBar.getModels().get(i);
-//                    navigationTabBar.postDelayed(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            model.showBadge();
-//                        }
-//                    }, i * 100);
-//                }
-//            }
-//        }, 500);
+    }
 
 
+    private View Objective()
+    {
 
+        final View view = LayoutInflater.from(
+                getActivity()).inflate(R.layout.objective_tab, null, false);
+
+        final TextView txtPage = (TextView) view.findViewById(R.id.txt_objective);
+
+        txtPage.setTextSize(20);
+        txtPage.setText(setObjectiveText());
+
+        return view;
+    }
+
+    private String setObjectiveText() {
+    return getString(R.string.objective);
     }
 
 }

@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">My CV</string>
     <string name="objective">Every one searches for the BIG WHY.
-        Why I have to wake up today and why I have to get out of bed this morning why I have to live till tomorrow. \n
-        I have found my BIG WHY in programming and applying science beside computer. \n
-        My passion is “CODING” sleepless night coding, solving problem and even find the bugs, \n
-        yes I love to be tired, be under work pressure and out of my comfort zone.</string>
+        Why I have to wake up today and why I have to get out of bed this morning why I have to live till tomorrow. \n I have found my BIG WHY in programming and applying science beside computer. \n My passion is “CODING” sleepless night coding, solving problem and even find the bugs, \n yes I love to be tired, be under work pressure and out of my comfort zone.</string>
     <string name="user_name">Samer Kador</string>
     <string name="user_job">Android Developer</string>
 

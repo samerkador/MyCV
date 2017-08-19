@@ -75,6 +75,9 @@ public class PersonalFragment extends Fragment {
                     case 1:
                         view = Education();
                         break;
+                    case 2:
+                        view = personalDetails();
+                        break;
                     default:
                         view = Objective();
                         break;
@@ -82,6 +85,8 @@ public class PersonalFragment extends Fragment {
                 container.addView(view);
                 return view;
             }
+
+
         });
 
 
@@ -93,6 +98,7 @@ public class PersonalFragment extends Fragment {
         navigationTabBar.setViewPager(viewPager, 0);
 
     }
+
 
 
     private void setModels(ArrayList<NavigationTabBar.Model> models) {
@@ -158,6 +164,16 @@ public class PersonalFragment extends Fragment {
          return view;
 
     }
+
+
+    private View personalDetails() {
+
+        final View view = LayoutInflater.from(
+                getActivity()).inflate(R.layout.personal_details, null, false);
+        return view;
+
+    }
+
     private String setObjectiveText() {
     return getString(R.string.objective);
     }

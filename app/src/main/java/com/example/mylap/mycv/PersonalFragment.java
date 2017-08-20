@@ -8,12 +8,17 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import devlight.io.library.ntb.NavigationTabBar;
 
@@ -78,6 +83,9 @@ public class PersonalFragment extends Fragment {
                     case 2:
                         view = personalDetails();
                         break;
+                    case 3:
+                        view = strengthList();
+                        break;
                     default:
                         view = Objective();
                         break;
@@ -126,7 +134,7 @@ public class PersonalFragment extends Fragment {
                         getResources().getDrawable(R.drawable.ic_third),
                         Color.parseColor(colors[2]))
                         .selectedIcon(getResources().getDrawable(R.drawable.ic_seventh))
-                        .title("Diploma")
+                        .title("Details")
                         .build()
         );
         models.add(
@@ -134,7 +142,7 @@ public class PersonalFragment extends Fragment {
                         getResources().getDrawable(R.drawable.ic_fifth),
                         Color.parseColor(colors[4]))
                         .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
-                        .title("Medal")
+                        .title("Strengths")
                         .build()
         );
 
@@ -173,6 +181,25 @@ public class PersonalFragment extends Fragment {
         return view;
 
     }
+
+
+    private View strengthList() {
+        final View view = LayoutInflater.from(
+                getActivity()).inflate(R.layout.strengths_list_tab, null, false);
+
+
+        final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv_strengths);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(
+                        getActivity(), LinearLayoutManager.VERTICAL, false
+                )
+        );
+
+        ArrayList<String> StrengthListData = new ArrayList( Arrays.asList( getResources().getStringArray(R.array.strength_list) ));
+        recyclerView.setAdapter(new RecViewAdapterStrength(getActivity(), StrengthListData ));
+        return  view;
+    }
+
 
     private String setObjectiveText() {
     return getString(R.string.objective);

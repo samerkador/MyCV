@@ -3,8 +3,14 @@
 
 
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#E84A5F</color>
+    <color name="colorPrimaryDark">#FF2E63</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorTop">#08D9D6</color>
+    <color name="colorBottom">#EAEAEA</color>
+    <color name="colorMidPink">#FF2E63</color>
+    <color name="colorMidBlack">#252A34</color>
 
 
 

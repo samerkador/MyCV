@@ -16,5 +16,5 @@
     android:gravity="center"
     android:textSize="20dp"
     android:text="Navigation"
-    android:textColor="@color/colorMidBlack"
+    android:textColor="@color/colorBottom"
     android:textStyle="bold"/>

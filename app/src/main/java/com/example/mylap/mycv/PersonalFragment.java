@@ -1,7 +1,9 @@
 package com.example.mylap.mycv;
 
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
@@ -10,6 +12,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -206,5 +209,29 @@ public class PersonalFragment extends Fragment {
     }
 
 
+    public void HandelOnClickListener(View view) {
+
+
+        Intent intent = null;
+        switch (view.getId())
+        {
+            case R.id.ll_personal_phone:
+                intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "+201159550915"));
+                break;
+            case  R.id.ll_personal_Email:
+                intent = new Intent(Intent.ACTION_SENDTO , Uri.parse("mailto:" + "samer.kador.94@gmail.com"));
+                break;
+            case R.id.ll_personal_Address:
+               // intent = new Intent((Intent.ACTION_VIEW) , Uri.parse("geo:0,0?q=" + "Mohammed Abd El-Azeem Sallam, Al Manteqah Ath Thamenah, Nasr City, Cairo Governorate"));
+                intent = new Intent((Intent.ACTION_VIEW) , Uri.parse("geo:0,0?q=" + "30.052396,31.343912(samer kador home)"));
+                break;
+        }
+
+        assert intent != null;
+        if (intent.resolveActivity( getActivity().getPackageManager()) != null) {
+            startActivity(intent);
+        }
+
+    }
 
 }

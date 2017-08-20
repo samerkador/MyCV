@@ -61,4 +61,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void PersonalOnClick(View view) {
+        PersonalFragment personalFragment = (PersonalFragment) fragments.get(3);
+        personalFragment.HandelOnClickListener(view);
+    }
 }

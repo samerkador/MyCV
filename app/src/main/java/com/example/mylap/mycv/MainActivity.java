@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        fragments.add(new ProjectFragment());
-        fragments.add(new PersonalFragment());
+        fragments.add(new BlankFragment());
+        fragments.add(new BlankFragment());
         fragments.add(new ProjectFragment());
         fragments.add(new PersonalFragment());
 
@@ -64,5 +64,19 @@ public class MainActivity extends AppCompatActivity {
     public void PersonalOnClick(View view) {
         PersonalFragment personalFragment = (PersonalFragment) fragments.get(3);
         personalFragment.HandelOnClickListener(view);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        ProjectFragment projectFragment = (ProjectFragment) fragments.get(2);
+
+        if (projectFragment.unfoldableView != null
+                && (projectFragment.unfoldableView.isUnfolded() || projectFragment.unfoldableView.isUnfolding())) {
+            projectFragment.unfoldableView.foldBack();
+        } else {
+            super.onBackPressed();
+        }
+
     }
 }

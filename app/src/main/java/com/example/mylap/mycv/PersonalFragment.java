@@ -152,8 +152,7 @@ public class PersonalFragment extends Fragment {
     }
 
 
-    private View Objective()
-    {
+    private View Objective() {
 
         final View view = LayoutInflater.from(
                 getActivity()).inflate(R.layout.objective_tab, null, false);
@@ -165,8 +164,6 @@ public class PersonalFragment extends Fragment {
 
         return view;
     }
-
-
 
     private View Education() {
 

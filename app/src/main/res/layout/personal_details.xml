@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <TextView
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:text="Date of birth :"
         android:textColor="@color/colorPrimaryDark"
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
 
         <TextView
             android:layout_marginLeft="15dp"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:text="19th June 1994"
             android:textColor="@color/colorMidBlack"
             android:layout_width="match_parent"
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:text="Languages known:"
             android:textColor="@color/colorPrimaryDark"
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
 
         <TextView
             android:layout_marginLeft="15dp"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:text="Arabic \n English"
             android:textColor="@color/colorMidBlack"
             android:layout_width="match_parent"
@@ -80,7 +80,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="15dp"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:gravity="center"
         android:text="No military duty"
         android:textColor="@color/colorMidBlack"

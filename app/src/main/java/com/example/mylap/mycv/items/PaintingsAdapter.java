@@ -1,16 +1,13 @@
 package com.example.mylap.mycv.items;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alexvasilkov.android.commons.adapters.ItemsAdapter;
-import com.alexvasilkov.android.commons.ui.ContextHelper;
 import com.alexvasilkov.android.commons.ui.Views;
 
 import com.example.mylap.mycv.ProjectFragment;
@@ -58,7 +55,7 @@ public class PaintingsAdapter extends ItemsAdapter<Painting, PaintingsAdapter.Vi
         final TextView title;
 
         ViewHolder(ViewGroup parent) {
-            super(Views.inflate(parent, R.layout.list_item_floadable_list));
+            super(Views.inflate(parent, R.layout.item_list_floadable_list));
             image = Views.find(itemView, R.id.list_item_image);
             title = Views.find(itemView, R.id.list_item_title);
         }

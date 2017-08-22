@@ -84,7 +84,7 @@
         android:layout_weight="0.3">
         <TextView
             android:textColor="#FF2E63"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Phone"
@@ -118,7 +118,7 @@
         android:layout_weight="0.3">
         <TextView
             android:gravity="center"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:text="Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.3">
         <TextView
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#FF2E63"
             android:text="Addres"
             android:layout_width="match_parent"

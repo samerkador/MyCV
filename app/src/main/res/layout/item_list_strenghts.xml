@@ -14,7 +14,7 @@
     android:layout_marginBottom="5dp"
     android:background="@drawable/border"
     android:gravity="center"
-    android:textSize="20dp"
+    android:textSize="20sp"
     android:text="Navigation"
     android:textColor="@color/colorBottom"
     android:textStyle="bold"/>

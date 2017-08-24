@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         coolMenuFrameLayout = $(R.id.rl_main);
-        String[] titles = { "AWARDS","EXPERIENCE","PROJECTS","OBJECTIVE"};
+        String[] titles = { "AWARDS","EXPERIENCE","PROJECTS","BASIC INFO"};
         titleList = Arrays.asList(titles);
         coolMenuFrameLayout.setTitles(titleList);
 

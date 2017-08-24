@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -16,10 +15,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -154,31 +151,29 @@ public class PersonalFragment extends Fragment {
 
     private View Objective() {
 
-        final View view = LayoutInflater.from(
+        final View viewInflater = LayoutInflater.from(
                 getActivity()).inflate(R.layout.objective_tab, null, false);
 
-        final TextView txtPage = (TextView) view.findViewById(R.id.txt_objective);
+        final TextView txtPage = (TextView) viewInflater.findViewById(R.id.txt_objective);
 
         txtPage.setTextSize(20);
         txtPage.setText(setObjectiveText());
 
-        return view;
+        return viewInflater;
     }
 
     private View Education() {
 
-        final View view = LayoutInflater.from(
-                getActivity()).inflate(R.layout.education_tab, null, false);
-         return view;
+         return LayoutInflater.from(
+                 getActivity()).inflate(R.layout.education_tab, null, false);
 
     }
 
 
     private View personalDetails() {
 
-        final View view = LayoutInflater.from(
-                getActivity()).inflate(R.layout.personal_details, null, false);
-        return view;
+        return LayoutInflater.from(
+                getActivity()).inflate(R.layout.personal_details_tab, null, false);
 
     }
 

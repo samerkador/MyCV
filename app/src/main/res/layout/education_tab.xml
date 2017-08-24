@@ -4,41 +4,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<ScrollView
-    android:layout_weight="0.5"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <TextView
-            android:textSize="25sp"
-            android:text="AL_ANDALUS"
-            android:textColor="#000000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:textColor="#444444"
-            android:textSize="20sp"
-            android:text="Damascus, Syria"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:textColor="#666666"
-            android:textSize="15sp"
-            android:text="General certificate of education \n 2011 – 2012"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:textColor="#888888"
-            android:textSize="20sp"
-            android:text="Scientific \n GPA 83%"
+    <ScrollView
+        android:layout_weight="1.03"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-</ScrollView>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tx_left_1"
+                android:layout_alignParentLeft="true"
+                android:textSize="18sp"
+                android:text="AL_ANDALUS"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tx_left_2"
+                android:textColor="#444444"
+                android:textSize="15sp"
+                android:text="Damascus, Syria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tx_left_1"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:textDirection="ltr"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/tx_left_3"
+                android:layout_below="@+id/tx_left_2"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                android:text="General certificate of education \n 2011 – 2012"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tx_left_3"
+                android:textColor="#888888"
+                android:textSize="20sp"
+                android:text="Scientific \n GPA 83%"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </ScrollView>
 
     <View
         android:layout_width="1dp"
@@ -54,37 +64,46 @@
         android:layout_weight="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_gravity="right"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5">
-        <TextView
-        android:textSize="25sp"
-        android:text="AIN SHAMS UNIVERSITY"
-        android:textColor="#000000"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-        <TextView
-            android:textColor="#444444"
-            android:textSize="20sp"
-            android:text="Cairo, Egypt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:textColor="#666666"
-            android:textSize="15sp"
-            android:text="Bachelor Degree \n 2013 – 2017"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:textColor="#888888"
-            android:textSize="20sp"
-            android:text="Computer Science \n  Good, GPA 70%"
+        <RelativeLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tx_right_1"
+                android:layout_alignParentLeft="true"
+                android:textSize="18sp"
+                android:text="AIN SHAMS UNIVERSITY"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tx_right_2"
+                android:textColor="#444444"
+                android:textSize="15sp"
+                android:text="Cairo, Egypt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tx_right_1"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/tx_right_3"
+                android:layout_below="@+id/tx_right_2"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                android:textDirection="ltr"
+                android:text="Bachelor Degree \n 2013 – 2017"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tx_right_3"
+                android:textColor="#888888"
+                android:textSize="20sp"
+                android:text="Computer Science \n  Good, GPA 70%"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
     </ScrollView>
 
 

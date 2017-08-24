@@ -7,7 +7,7 @@
 
 
     <string-array name="strength_list">
-        <item>End to end android developer, working throughout the entire lifecycle of building android apps. (System architecture like MVPMVC, android components, Ui/Ux design, database design, Networking).</item>
+        <item>End to end android developer, working throughout the entire lifecycle of building android apps. (System architecture like MVP-MVC, android components, Ui/Ux design, database design, Networking).</item>
         <item>Data structure, how it builds and work and how to use all STL.</item>
         <item>OOP concept specifically in C++, C# and JAVA and with knowledge of design pattern.</item>
         <item>Can work with GUI in C++, C# or JAVA.</item>
@@ -15,9 +15,5 @@
         <item>using Git, SVN and version control in general.</item>
 
     </string-array>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 </resources>

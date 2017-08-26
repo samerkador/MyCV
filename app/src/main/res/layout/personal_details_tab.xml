@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    tools:ignore="NestedWeights"
+    android:weightSum="3"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Date of birth:"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tx_date_birth" />
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="19th June 1994"
+            android:textColor="@color/colorMidBlack"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tx_date_birth"
+            android:layout_marginLeft="32dp" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="15dp"
+        android:background="#aa424242" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="18sp"
+            android:text="Languages known:"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tx_lang_known" />
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Arabic, English"
+            android:textColor="@color/colorMidBlack"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tx_lang_known"
+            android:layout_marginLeft="32dp" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="15dp"
+        android:background="#aa424242" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="18sp"
+            android:text="Military status:"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/tx_military_status" />
+
+        <TextView
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Not Applicable"
+            android:textColor="@color/colorMidBlack"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tx_military_status"
+            android:layout_marginLeft="32dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+    </ScrollView>

@@ -38,7 +38,7 @@ public class DetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        View view =inflater.inflate(R.layout.fragment_details, container, false);
+        View view =inflater.inflate(R.layout.fragment_project_details, container, false);
 
         final ImageView image = (ImageView) view.findViewById(R.id.details_image);
         final TextView title = (TextView) view.findViewById(R.id.details_title);

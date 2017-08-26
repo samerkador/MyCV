@@ -6,22 +6,4 @@
     tools:context="com.example.mylap.mycv.BlankFragment">
 
 
-
-    <android.support.v7.widget.CardView
-        android:layout_alignParentLeft="true"
-        android:id="@+id/cv_image_user_personal_photo"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="60dp"
-        frisson:cardCornerRadius="50dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/my_photo" />
-    </android.support.v7.widget.CardView>
-
-
 </FrameLayout>

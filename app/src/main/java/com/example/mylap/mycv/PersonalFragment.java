@@ -11,11 +11,12 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.mylap.mycv.items.RecViewAdapterStrength;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -180,7 +181,7 @@ public class PersonalFragment extends Fragment {
 
     private View strengthList() {
         final View view = LayoutInflater.from(
-                getActivity()).inflate(R.layout.strengths_list_tab, null, false);
+                getActivity()).inflate(R.layout.skill_list_tab, null, false);
 
 
         final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv_strengths);

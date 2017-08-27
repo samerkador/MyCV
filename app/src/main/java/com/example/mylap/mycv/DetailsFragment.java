@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alexvasilkov.android.commons.texts.SpannableBuilder;
-import com.example.mylap.mycv.items.Painting;
+import com.example.mylap.mycv.model.Painting;
 import com.example.mylap.mycv.utils.GlideHelper;
 
 

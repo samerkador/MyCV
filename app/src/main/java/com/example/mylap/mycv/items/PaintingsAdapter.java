@@ -12,6 +12,7 @@ import com.alexvasilkov.android.commons.ui.Views;
 
 import com.example.mylap.mycv.ProjectFragment;
 import com.example.mylap.mycv.R;
+import com.example.mylap.mycv.model.Painting;
 import com.example.mylap.mycv.utils.GlideHelper;
 
 import java.util.Arrays;

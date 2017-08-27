@@ -7,20 +7,15 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import com.alexvasilkov.android.commons.ui.Views;
 import com.alexvasilkov.foldablelayout.UnfoldableView;
 import com.alexvasilkov.foldablelayout.shading.GlanceFoldShading;
-import com.example.mylap.mycv.items.Painting;
+import com.example.mylap.mycv.model.Painting;
 import com.example.mylap.mycv.items.PaintingsAdapter;
-import com.example.mylap.mycv.utils.GlideHelper;
 
 
 /**

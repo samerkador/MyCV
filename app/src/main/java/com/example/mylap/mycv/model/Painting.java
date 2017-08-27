@@ -1,4 +1,4 @@
-package com.example.mylap.mycv.items;
+package com.example.mylap.mycv.model;
 
 import android.content.res.Resources;
 import android.content.res.TypedArray;

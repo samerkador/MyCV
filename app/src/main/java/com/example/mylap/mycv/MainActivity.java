@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     List<String> titleList = null;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
         coolMenuFrameLayout.setTitles(titleList);
 
 
-
-        fragments.add(new BlankFragment());
         fragments.add(new BlankFragment());
         fragments.add(new ProjectFragment());
         fragments.add(new PersonalFragment());

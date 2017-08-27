@@ -10,4 +10,4 @@
     android:paddingBottom="5dp"
     android:clipToPadding="false"
     android:clipChildren="false"
-    tools:listitem="@layout/item_list_strenghts"/>
+    tools:listitem="@layout/item_list_skill"/>

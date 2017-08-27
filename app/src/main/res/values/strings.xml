@@ -7,13 +7,9 @@
 
 
     <string-array name="strength_list">
-        <item>End to end android developer, working throughout the entire lifecycle of building android apps. (System architecture like MVP-MVC, android components, Ui/Ux design, database design, Networking).</item>
-        <item>Data structure, how it builds and work and how to use all STL.</item>
-        <item>OOP concept specifically in C++, C# and JAVA and with knowledge of design pattern.</item>
-        <item>Can work with GUI in C++, C# or JAVA.</item>
-        <item>skills with problem solving, qualified to level three in ACM.</item>
-        <item>using Git, SVN and version control in general.</item>
-
+        <item>Software languages such as C, C++, C#, Java, PHP, MySQL, Oracle SQL, MatLab, Prolog, Assembly language.</item>
+        <item>Markup languages such as HTML, XML, XAML, JSON.</item>
+        <item>skills in programming concepts like OOP &amp; Design patterns, Algorithms, Data Structures, OpenGL, Relational database and even in NoSQL database.</item>
     </string-array>
 
 </resources>

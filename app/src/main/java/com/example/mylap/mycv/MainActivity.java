@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         coolMenuFrameLayout = $(R.id.rl_main);
-        String[] titles = { "AWARDS","EXPERIENCE","PROJECTS","BASIC INFO"};
+        String[] titles = { "EXPERIENCE","PROJECTS","BASIC INFO"};
         titleList = Arrays.asList(titles);
         coolMenuFrameLayout.setTitles(titleList);
 
@@ -58,14 +58,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void PersonalOnClick(View view) {
-        PersonalFragment personalFragment = (PersonalFragment) fragments.get(3);
+        PersonalFragment personalFragment = (PersonalFragment) fragments.get(2);
         personalFragment.HandelOnClickListener(view);
     }
 
 
     @Override
     public void onBackPressed() {
-        ProjectFragment projectFragment = (ProjectFragment) fragments.get(2);
+        ProjectFragment projectFragment = (ProjectFragment) fragments.get(1);
 
         if (projectFragment.unfoldableView != null
                 && (projectFragment.unfoldableView.isUnfolded() || projectFragment.unfoldableView.isUnfolding())) {

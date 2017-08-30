@@ -191,7 +191,7 @@ public class PersonalFragment extends Fragment {
                 )
         );
 
-        ArrayList<String> StrengthListData = new ArrayList( Arrays.asList( getResources().getStringArray(R.array.strength_list) ));
+        ArrayList<String> StrengthListData = new ArrayList( Arrays.asList( getResources().getStringArray(R.array.skills_list) ));
         recyclerView.setAdapter(new RecViewAdapterStrength(getActivity(), StrengthListData ));
         return  view;
     }

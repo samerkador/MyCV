@@ -15,9 +15,6 @@
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
-            app:ntb_badge_gravity="bottom"
-            app:ntb_badge_position="center"
-            app:ntb_badged="true"
             android:layout_gravity="center"
             app:ntb_corners_radius="25dp"
             app:ntb_bg_color="@color/colorMidBlack"
@@ -25,7 +22,6 @@
             app:ntb_title_mode="all"
             app:ntb_title_size="10sp"
             app:ntb_scaled="true"
-            app:ntb_badge_title_color="#FFFFFF"
             app:ntb_tinted="true"
             app:ntb_swiped="true"/>
 

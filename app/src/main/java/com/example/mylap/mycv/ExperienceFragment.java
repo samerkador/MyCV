@@ -87,7 +87,6 @@ public class ExperienceFragment extends Fragment implements  NavigationTabBar.On
                         getResources().getDrawable(R.drawable.icon_strength),
                         Color.parseColor(colors[0]))
                         .selectedIcon(getResources().getDrawable(R.drawable.icon_strength_selected))
-                        .badgeTitle("Strengths")
                         .title("Strengths")
                         .build()
         );
@@ -96,7 +95,6 @@ public class ExperienceFragment extends Fragment implements  NavigationTabBar.On
                         getResources().getDrawable(R.drawable.icon_briefcase_experience),
                         Color.parseColor(colors[1]))
                         .selectedIcon(getResources().getDrawable(R.drawable.icon_businessman_experience))
-                        .badgeTitle("Experience")
                         .title("Experience")
                         .build()
         );
@@ -105,7 +103,6 @@ public class ExperienceFragment extends Fragment implements  NavigationTabBar.On
                         getResources().getDrawable(R.drawable.ic_fifth),
                         Color.parseColor(colors[2]))
                         .selectedIcon(getResources().getDrawable(R.drawable.ic_second))
-                        .badgeTitle("Awards")
                         .title("Awards")
                         .build()
         );

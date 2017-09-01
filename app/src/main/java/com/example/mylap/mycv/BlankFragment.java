@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,11 +14,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.eftimoff.viewpagertransformers.FlipVerticalTransformer;
+//import com.eftimoff.viewpagertransformers.FlipVerticalTransformer;
 import com.example.mylap.mycv.items.RecViewAdapterStrength;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import devlight.io.library.ntb.NavigationTabBar;
 
@@ -25,7 +27,7 @@ import devlight.io.library.ntb.NavigationTabBar;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BlankFragment extends Fragment {
+public class BlankFragment extends Fragment implements  NavigationTabBar.OnTabBarSelectedIndexListener{
 
 
     public BlankFragment() {
@@ -34,6 +36,10 @@ public class BlankFragment extends Fragment {
 
 
     View view;
+    int currentFragmentIndex = 0;
+
+    List<Fragment> fragments = new ArrayList<>();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,49 +59,6 @@ public class BlankFragment extends Fragment {
 
 
     private void initUI() {
-        final ViewPager viewPager = $(R.id.vp_vertical);
-        viewPager.setPageTransformer(true,new FlipVerticalTransformer()  );
-
-        viewPager.setAdapter(new PagerAdapter() {
-            @Override
-            public int getCount() {
-                return 3;
-            }
-
-            @Override
-            public boolean isViewFromObject(final View view, final Object object) {
-                return view.equals(object);
-            }
-
-            @Override
-            public void destroyItem(final View container, final int position, final Object object) {
-                ((ViewPager) container).removeView((View) object);
-            }
-
-            @Override
-            public Object instantiateItem(final ViewGroup container, final int position) {
-
-                View view = null;
-                switch (position){
-                    case 0:
-                        view = loadList(0);
-                        break;
-                    case 1:
-                        view = loadList(1);
-                        break;
-                    case 2:
-                        view = loadList(2);
-                        break;
-                    default:
-                        view = loadList(0);
-                        break;
-                }
-                container.addView(view);
-                return view;
-            }
-
-
-        });
 
 
         final NavigationTabBar navigationTabBar =  $(R.id.ntb_vertical);
@@ -103,9 +66,18 @@ public class BlankFragment extends Fragment {
         setModels(models);
 
         navigationTabBar.setModels(models);
-        navigationTabBar.setViewPager(viewPager, 0);
+        //navigationTabBar.setViewPager(viewPager, 0);
+        navigationTabBar.setModelIndex(0);
+
+
+        loadFirstFragment();
+
+        navigationTabBar.setOnTabBarSelectedIndexListener(this);
+
+
 
     }
+
 
     private void setModels(ArrayList<NavigationTabBar.Model> models) {
 
@@ -129,7 +101,7 @@ public class BlankFragment extends Fragment {
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.ic_fifth),
                         Color.WHITE)
-                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
+                        .selectedIcon(getResources().getDrawable(R.drawable.ic_second))
                         .title("Awards")
                         .build()
         );
@@ -137,32 +109,61 @@ public class BlankFragment extends Fragment {
     }
 
 
-    private View loadList( int list) {
-        final View view = LayoutInflater.from(
-                getActivity()).inflate(R.layout.skill_list_tab, null, false);
+
+    private void loadFirstFragment() {
 
 
-        final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv_strengths);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(
-                        getActivity(), LinearLayoutManager.VERTICAL, false)
-        );
+        fragments.add(new ListFragment());
+        fragments.add(new ListFragment());
+        fragments.add(new ListFragment());
+
+        Bundle bundle=new Bundle();
+        bundle.putInt("index", 0);
+
+        fragments.get(0).setArguments(bundle);
 
 
-        ArrayList<String> ListData = null;
-        switch (list){
-            case 0:
-                ListData = new ArrayList( Arrays.asList( getResources().getStringArray(R.array.strength_list) ));
-                break;
-            case 2:
-                ListData = new ArrayList( Arrays.asList( getResources().getStringArray(R.array.awards_list) ));
-                break;
-            case 1:
-                ListData = new ArrayList( Arrays.asList( getResources().getStringArray(R.array.experience_list) ));
-                break;
+        FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction()
+                .addToBackStack( String.valueOf(0))
+                .add(R.id.fragment_list_frame, fragments.get(0));
+
+        fragmentTransaction.commitAllowingStateLoss();
+
+
+    }
+
+
+    @Override
+    public void onStartTabSelected(NavigationTabBar.Model model, int index) {
+
+    }
+
+    @Override
+    public void onEndTabSelected(NavigationTabBar.Model model, int index) {
+
+        if (index != currentFragmentIndex) {
+
+            Bundle bundle = new Bundle();
+            bundle.putInt("index", index);
+
+            fragments.get(index).setArguments(bundle);
+
+
+            FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
+
+            if (index > currentFragmentIndex)
+                fragmentTransaction.setCustomAnimations(R.anim.enter_from_down, R.anim.exit_to_up , R.anim.enter_from_up, R.anim.exit_to_down );
+            else
+                fragmentTransaction.setCustomAnimations(R.anim.enter_from_up, R.anim.exit_to_down , R.anim.enter_from_down, R.anim.exit_to_up);
+
+
+            fragmentTransaction.replace(R.id.fragment_list_frame, fragments.get(index));
+
+            fragmentTransaction.commitAllowingStateLoss();
+            currentFragmentIndex = index;
         }
-        recyclerView.setAdapter(new RecViewAdapterStrength(getActivity(), ListData ));
-        return  view;
+
+
     }
 
 

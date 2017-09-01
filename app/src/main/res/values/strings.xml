@@ -20,8 +20,8 @@
         <item>skills with problem solving, qualified to level three in ACM.</item>
         <item>using Git, SVN and version control in general.</item>
     </string-array>
-    
-    
+
+
     <string-array name="awards_list">
         <item>19th Rank – Ain Shams University’s ACM local Contest (out of 103)</item>
         <item>35th Rank – Egypt ACM National Contest (out of 120)  </item>
@@ -45,5 +45,8 @@
         <item>#ffa10a37</item>
         <item>#ffbf013b</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

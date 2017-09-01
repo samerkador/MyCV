@@ -12,10 +12,13 @@ import android.view.ViewGroup;
 
 //import com.eftimoff.viewpagertransformers.FlipVerticalTransformer;
 
+//import com.gigamole.navigationtabbar.ntb.NavigationTabBar;
+
+import com.example.navigationtabbar.ntb.NavigationTabBar;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import devlight.io.library.ntb.NavigationTabBar;
 
 
 /**

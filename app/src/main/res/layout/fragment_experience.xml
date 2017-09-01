@@ -9,9 +9,9 @@
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <devlight.io.library.ntb.NavigationTabBar
+        <com.example.navigationtabbar.ntb.NavigationTabBar
             android:id="@+id/ntb_vertical"
-            android:layout_width="50dp"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
@@ -23,7 +23,7 @@
             app:ntb_bg_color="@color/colorMidBlack"
             app:ntb_titled="true"
             app:ntb_title_mode="all"
-            app:ntb_title_size="14sp"
+            app:ntb_title_size="10sp"
             app:ntb_scaled="true"
             app:ntb_badge_title_color="#FFFFFF"
             app:ntb_tinted="true"

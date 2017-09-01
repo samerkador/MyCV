@@ -63,7 +63,7 @@
             android:layout_marginLeft="21dp"
             android:layout_toRightOf="@+id/cv_image_user_personal_photo"
             android:text="@string/user_job"
-            android:textColor="#BBBBBB"
+            android:textColor="#FFFFFF"
             android:textSize="15dp" />
 
     </RelativeLayout>
@@ -73,7 +73,7 @@
     android:layout_width="match_parent"
     android:layout_height="100dp">
     <LinearLayout
-        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/view_left_basic_info"
         android:id="@+id/ll_personal_phone"
         android:onClick="PersonalOnClick"
         android:orientation="vertical"
@@ -91,7 +91,7 @@
             android:layoutDirection="ltr"
             android:layout_marginTop="3dp"
             android:layout_marginLeft="10dp"
-            android:text="+201159 \n 550915"
+            android:text="+201159550 \n 915"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -99,18 +99,18 @@
 
     <View
         android:id="@+id/view_left_basic_info"
-        android:layout_toRightOf="@+id/ll_personal_phone"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_marginTop="25dp"
-        android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
         android:layout_marginBottom="25dp"
-        android:background="#aa424242" />
+        android:background="#aa424242"
+        android:layout_toLeftOf="@+id/ll_personal_Email" />
 
 
     <LinearLayout
-        android:layout_toRightOf="@+id/view_left_basic_info"
+        android:layout_centerHorizontal="true"
         android:id="@+id/ll_personal_Email"
         android:onClick="PersonalOnClick"
         android:orientation="vertical"
@@ -128,7 +128,7 @@
         <TextView
             android:layout_marginTop="3dp"
             android:gravity="center"
-            android:text="samer.kador.94 \n @gmail.com"
+            android:text="samer.\nkador.94@ \n gmail.com"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.45"/>
@@ -143,6 +143,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="25dp"
         android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="25dp"
         android:background="#aa424242" />
 
@@ -184,7 +185,7 @@
             android:layout_height="0dp"
             android:layout_weight="2.90"/>
 
-        <devlight.io.library.ntb.NavigationTabBar
+        <com.example.navigationtabbar.ntb.NavigationTabBar
             android:id="@+id/ntb_horizontal"
             android:layout_width="match_parent"
             android:layout_height="60dp"

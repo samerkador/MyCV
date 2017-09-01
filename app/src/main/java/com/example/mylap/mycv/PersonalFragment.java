@@ -17,11 +17,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.mylap.mycv.items.RecViewAdapterStrength;
+import com.example.navigationtabbar.ntb.NavigationTabBar;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import devlight.io.library.ntb.NavigationTabBar;
+//import devlight.io.library.ntb.NavigationTabBar;
 
 
 /**

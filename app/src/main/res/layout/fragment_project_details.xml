@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/details_image"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="280dp"
         android:adjustViewBounds="true" />
 
     <View
@@ -27,7 +27,7 @@
         android:layout_marginRight="@dimen/default_margin"
         android:layout_marginTop="12dp"
         android:textColor="#fff"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
 
     <View
         android:layout_width="match_parent"
@@ -40,13 +40,13 @@
         android:id="@+id/details_lang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="@dimen/default_margin"
         android:layout_marginRight="@dimen/default_margin"
-        android:layout_marginTop="8dp"
-        android:lineSpacingExtra="4sp"
+        android:layout_marginTop="4dp"
+        android:lineSpacingExtra="1sp"
         android:textColor="#eee"
-        android:textSize="14sp" />
+        android:textSize="13sp" />
 
 
     <View
@@ -64,13 +64,12 @@
         android:id="@+id/details_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="@dimen/default_margin"
         android:layout_marginRight="@dimen/default_margin"
-        android:layout_marginTop="8dp"
-        android:lineSpacingExtra="2sp"
+        android:layout_marginTop="4dp"
         android:textColor="#eee"
-        android:textSize="14sp" />
+        android:textSize="13sp" />
     </ScrollView>
 
 </LinearLayout>

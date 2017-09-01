@@ -33,7 +33,7 @@
         <com.intrusoft.library.FrissonView
             android:id="@+id/wave_head"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="190dp"
             frisson:alphaValue="50"
             frisson:gradientType="radial"
             frisson:gradient_endColor="#252A3400"
@@ -91,7 +91,7 @@
             android:layoutDirection="ltr"
             android:layout_marginTop="3dp"
             android:layout_marginLeft="10dp"
-            android:text="+201159550915"
+            android:text="+201159 \n 550915"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -159,13 +159,13 @@
         <TextView
             android:textSize="18sp"
             android:textColor="#FF2E63"
-            android:text="Addres"
+            android:text="Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.45"/>
         <TextView
             android:layout_marginTop="3dp"
-            android:text="Abd Al Azim Salam st \n Nasr city"
+            android:text="Abd Al Azim Salam st "
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.45"/>
@@ -188,7 +188,7 @@
             android:id="@+id/ntb_horizontal"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            app:ntb_bg_color="#252A34"
+            app:ntb_bg_color="@color/colorMidBlack"
             app:ntb_scaled="true"
             app:ntb_badge_title_color="#FFFFFF"
             app:ntb_tinted="true"

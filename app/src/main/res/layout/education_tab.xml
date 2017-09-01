@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <ScrollView
+        android:layoutDirection="ltr"
         android:layout_weight="1.03"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
@@ -60,6 +61,7 @@
         android:background="#aa424242" />
 
     <ScrollView
+        android:layoutDirection="ltr"
         android:layout_gravity="right"
         android:layout_weight="1"
         android:layout_width="wrap_content"

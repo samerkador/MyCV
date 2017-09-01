@@ -17,12 +17,12 @@ import java.util.ArrayList;
 public class RecViewAdapterStrength extends RecyclerView.Adapter<ViewHolderSkill> {
 
 
-    ArrayList<String> dataStrength;
+    ArrayList<String> data;
     Context context;
 
-    public RecViewAdapterStrength(Context context ,ArrayList<String> dataStrength) {
+    public RecViewAdapterStrength(Context context ,ArrayList<String> data) {
         this.context = context;
-        this.dataStrength = dataStrength;
+        this.data = data;
     }
 
 
@@ -34,11 +34,11 @@ public class RecViewAdapterStrength extends RecyclerView.Adapter<ViewHolderSkill
 
     @Override
     public void onBindViewHolder(ViewHolderSkill holder, int position) {
-        holder.txt.setText(dataStrength.get(position));
+        holder.txt.setText(data.get(position));
     }
 
     @Override
     public int getItemCount() {
-       return dataStrength.size();
+       return data.size();
     }
 }

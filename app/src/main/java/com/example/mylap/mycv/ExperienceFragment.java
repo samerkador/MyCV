@@ -6,19 +6,13 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 //import com.eftimoff.viewpagertransformers.FlipVerticalTransformer;
-import com.example.mylap.mycv.items.RecViewAdapterStrength;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import devlight.io.library.ntb.NavigationTabBar;
@@ -27,10 +21,10 @@ import devlight.io.library.ntb.NavigationTabBar;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BlankFragment extends Fragment implements  NavigationTabBar.OnTabBarSelectedIndexListener{
+public class ExperienceFragment extends Fragment implements  NavigationTabBar.OnTabBarSelectedIndexListener{
 
 
-    public BlankFragment() {
+    public ExperienceFragment() {
         // Required empty public constructor
     }
 
@@ -45,7 +39,7 @@ public class BlankFragment extends Fragment implements  NavigationTabBar.OnTabBa
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_blank, container, false);
+        view = inflater.inflate(R.layout.fragment_experience, container, false);
         initUI();
 
         return view;
@@ -81,27 +75,34 @@ public class BlankFragment extends Fragment implements  NavigationTabBar.OnTabBa
 
     private void setModels(ArrayList<NavigationTabBar.Model> models) {
 
+
+        final String[] colors = getResources().getStringArray(R.array.default_preview);
+
+
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_second),
-                        Color.WHITE)
-//                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
+                        getResources().getDrawable(R.drawable.icon_strength),
+                        Color.parseColor(colors[0]))
+                        .selectedIcon(getResources().getDrawable(R.drawable.icon_strength_selected))
+                        .badgeTitle("Strengths")
                         .title("Strengths")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_third),
-                        Color.WHITE)
-                        .selectedIcon(getResources().getDrawable(R.drawable.ic_seventh))
+                        getResources().getDrawable(R.drawable.icon_briefcase_experience),
+                        Color.parseColor(colors[1]))
+                        .selectedIcon(getResources().getDrawable(R.drawable.icon_businessman_experience))
+                        .badgeTitle("Experience")
                         .title("Experience")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.ic_fifth),
-                        Color.WHITE)
+                        Color.parseColor(colors[2]))
                         .selectedIcon(getResources().getDrawable(R.drawable.ic_second))
+                        .badgeTitle("Awards")
                         .title("Awards")
                         .build()
         );
@@ -152,9 +153,9 @@ public class BlankFragment extends Fragment implements  NavigationTabBar.OnTabBa
             FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
 
             if (index > currentFragmentIndex)
-                fragmentTransaction.setCustomAnimations(R.anim.enter_from_down, R.anim.exit_to_up , R.anim.enter_from_up, R.anim.exit_to_down );
-            else
                 fragmentTransaction.setCustomAnimations(R.anim.enter_from_up, R.anim.exit_to_down , R.anim.enter_from_down, R.anim.exit_to_up);
+            else
+                fragmentTransaction.setCustomAnimations(R.anim.enter_from_down, R.anim.exit_to_up , R.anim.enter_from_up, R.anim.exit_to_down );
 
 
             fragmentTransaction.replace(R.id.fragment_list_frame, fragments.get(index));

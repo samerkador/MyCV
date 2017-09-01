@@ -82,10 +82,10 @@ public class PersonalFragment extends Fragment {
                         view = Education();
                         break;
                     case 2:
-                        view = personalDetails();
+                        view = PersonalDetails();
                         break;
                     case 3:
-                        view = strengthList();
+                        view = SkillList();
                         break;
                     default:
                         view = Objective();
@@ -116,34 +116,34 @@ public class PersonalFragment extends Fragment {
 
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_first),
+                        getResources().getDrawable(R.drawable.icon_objective_add_heart),
                         Color.parseColor(colors[0]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.ic_sixth))
+                        .selectedIcon(getResources().getDrawable(R.drawable.icon_objective_head))
                         .title("Objective")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_second),
+                        getResources().getDrawable(R.drawable.icon_education),
                         Color.parseColor(colors[1]))
-//                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
+                        .selectedIcon(getResources().getDrawable(R.drawable.icon_education_open_book))
                         .title("Education")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_third),
+                        getResources().getDrawable(R.drawable.icon_personal_identification_card),
                         Color.parseColor(colors[2]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.ic_seventh))
+                        .selectedIcon(getResources().getDrawable(R.drawable.icon_personal_details_identity_card))
                         .title("Details")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_fifth),
+                        getResources().getDrawable(R.drawable.icon_skill_worker),
                         Color.parseColor(colors[4]))
-                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
-                        .title("Strengths")
+                        .selectedIcon(getResources().getDrawable(R.drawable.icon_skill_employee))
+                        .title("Skills")
                         .build()
         );
 
@@ -171,7 +171,7 @@ public class PersonalFragment extends Fragment {
     }
 
 
-    private View personalDetails() {
+    private View PersonalDetails() {
 
         return LayoutInflater.from(
                 getActivity()).inflate(R.layout.personal_details_tab, null, false);
@@ -179,7 +179,7 @@ public class PersonalFragment extends Fragment {
     }
 
 
-    private View strengthList() {
+    private View SkillList() {
         final View view = LayoutInflater.from(
                 getActivity()).inflate(R.layout.skill_list_tab, null, false);
 
@@ -191,8 +191,8 @@ public class PersonalFragment extends Fragment {
                 )
         );
 
-        ArrayList<String> StrengthListData = new ArrayList( Arrays.asList( getResources().getStringArray(R.array.skills_list) ));
-        recyclerView.setAdapter(new RecViewAdapterStrength(getActivity(), StrengthListData ));
+        ArrayList<String> SkillsListData = new ArrayList( Arrays.asList( getResources().getStringArray(R.array.skills_list) ));
+        recyclerView.setAdapter(new RecViewAdapterStrength(getActivity(), SkillsListData ));
         return  view;
     }
 

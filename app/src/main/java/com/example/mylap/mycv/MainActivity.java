@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         coolMenuFrameLayout.setTitles(titleList);
 
 
-        fragments.add(new BlankFragment());
+        fragments.add(new ExperienceFragment());
         fragments.add(new ProjectFragment());
         fragments.add(new PersonalFragment());
 

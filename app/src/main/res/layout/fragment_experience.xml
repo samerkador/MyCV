@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="com.example.mylap.mycv.ExperienceFragment"
+        android:background="@color/colorBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <devlight.io.library.ntb.NavigationTabBar
+            android:id="@+id/ntb_vertical"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            app:ntb_badge_gravity="bottom"
+            app:ntb_badge_position="center"
+            app:ntb_badged="true"
+            android:layout_gravity="center"
+            app:ntb_corners_radius="25dp"
+            app:ntb_bg_color="@color/colorMidBlack"
+            app:ntb_titled="true"
+            app:ntb_title_mode="all"
+            app:ntb_title_size="14sp"
+            app:ntb_scaled="true"
+            app:ntb_badge_title_color="#FFFFFF"
+            app:ntb_tinted="true"
+            app:ntb_swiped="true"/>
+
+
+        <FrameLayout
+            android:id="@+id/fragment_list_frame"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>

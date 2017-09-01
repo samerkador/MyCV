@@ -11,7 +11,7 @@
     <color name="colorBottom">#EAEAEA</color>
     <color name="colorMidPink">#FF2E63</color>
     <color name="colorMidBlack">#252A34</color>
-
+    <color name="colorGrayBackground">#FF646460</color>
 
     <color name="saffron">#F4B63E</color>
     <color name="sienna">#EB6460</color>

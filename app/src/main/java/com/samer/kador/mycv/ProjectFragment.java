@@ -1,4 +1,4 @@
-package com.example.mylap.mycv;
+package com.samer.kador.mycv;
 
 
 import android.graphics.Bitmap;
@@ -14,8 +14,8 @@ import android.widget.ListView;
 
 import com.alexvasilkov.foldablelayout.UnfoldableView;
 import com.alexvasilkov.foldablelayout.shading.GlanceFoldShading;
-import com.example.mylap.mycv.model.Painting;
-import com.example.mylap.mycv.items.PaintingsAdapter;
+import com.samer.kador.mycv.model.Painting;
+import com.samer.kador.mycv.items.PaintingsAdapter;
 
 
 /**

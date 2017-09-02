@@ -1,4 +1,4 @@
-package com.example.mylap.mycv;
+package com.samer.kador.mycv;
 
 
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mylap.mycv.items.RecViewAdapterStrength;
+import com.samer.kador.mycv.items.RecViewAdapterStrength;
 
 import java.util.ArrayList;
 import java.util.Arrays;

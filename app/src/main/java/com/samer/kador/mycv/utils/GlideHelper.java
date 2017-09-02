@@ -1,10 +1,10 @@
-package com.example.mylap.mycv.utils;
+package com.samer.kador.mycv.utils;
 
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.example.mylap.mycv.model.Painting;
+import com.samer.kador.mycv.model.Painting;
 
 public class GlideHelper {
 

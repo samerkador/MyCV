@@ -1,4 +1,4 @@
-package com.example.mylap.mycv;
+package com.samer.kador.mycv;
 
 
 import android.graphics.Color;

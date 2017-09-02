@@ -1,9 +1,9 @@
-package com.example.mylap.mycv.model;
+package com.samer.kador.mycv.model;
 
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 
-import com.example.mylap.mycv.R;
+import com.samer.kador.mycv.R;
 
 
 public class Painting {

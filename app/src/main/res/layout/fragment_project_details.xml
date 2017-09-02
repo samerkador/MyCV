@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#333"
     android:orientation="vertical"
-    tools:context="com.example.mylap.mycv.DetailsFragment">
+    tools:context=".DetailsFragment">
 
     <ImageView
         android:id="@+id/details_image"

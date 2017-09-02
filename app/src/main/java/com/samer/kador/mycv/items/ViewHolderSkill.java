@@ -1,11 +1,11 @@
-package com.example.mylap.mycv.items;
+package com.samer.kador.mycv.items;
 
 import android.graphics.drawable.GradientDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.mylap.mycv.R;
+import com.samer.kador.mycv.R;
 
 /**
  * Created by Smra_PC on 8/20/2017.

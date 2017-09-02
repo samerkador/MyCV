@@ -1,4 +1,4 @@
-package com.example.mylap.mycv;
+package com.samer.kador.mycv;
 
 
 import android.content.Intent;
@@ -16,7 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.mylap.mycv.items.RecViewAdapterStrength;
+import com.samer.kador.mycv.items.RecViewAdapterStrength;
 import com.example.navigationtabbar.ntb.NavigationTabBar;
 
 import java.util.ArrayList;

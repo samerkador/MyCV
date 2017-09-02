@@ -1,4 +1,4 @@
-package com.example.mylap.mycv.items;
+package com.samer.kador.mycv.items;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -10,10 +10,10 @@ import android.widget.TextView;
 import com.alexvasilkov.android.commons.adapters.ItemsAdapter;
 import com.alexvasilkov.android.commons.ui.Views;
 
-import com.example.mylap.mycv.ProjectFragment;
-import com.example.mylap.mycv.R;
-import com.example.mylap.mycv.model.Painting;
-import com.example.mylap.mycv.utils.GlideHelper;
+import com.samer.kador.mycv.ProjectFragment;
+import com.samer.kador.mycv.R;
+import com.samer.kador.mycv.model.Painting;
+import com.samer.kador.mycv.utils.GlideHelper;
 
 import java.util.Arrays;
 

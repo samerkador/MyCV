@@ -1,4 +1,4 @@
-package com.example.mylap.mycv.views;
+package com.samer.kador.mycv.views;
 
 import android.content.Context;
 import android.graphics.Typeface;

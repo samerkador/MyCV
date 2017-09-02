@@ -1,4 +1,4 @@
-package com.example.mylap.mycv;
+package com.samer.kador.mycv;
 
 
 import android.graphics.Typeface;
@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alexvasilkov.android.commons.texts.SpannableBuilder;
-import com.example.mylap.mycv.model.Painting;
-import com.example.mylap.mycv.utils.GlideHelper;
+import com.samer.kador.mycv.model.Painting;
+import com.samer.kador.mycv.utils.GlideHelper;
 
 
 /**

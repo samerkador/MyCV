@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorGrayBackground"
-    tools:context="com.example.mylap.mycv.MainActivity">
+    tools:context="com.samer.kador.mycv.MainActivity">
 
 
 

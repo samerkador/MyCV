@@ -1,4 +1,4 @@
-package com.example.mylap.mycv.items;
+package com.samer.kador.mycv.items;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mylap.mycv.R;
+import com.samer.kador.mycv.R;
 
 import java.util.ArrayList;
 

@@ -6,7 +6,8 @@
         <item>Indoor mobile robot for package delivery</item>
         <item>Intelligent scissors (Lasso magnetic tool)</item>
         <item>Snack and ladder game</item>
-        <item>Library mangment system</item>
+        <item>Library management system</item>
+        <item>Friendly chat</item>
     </string-array>
 
     <string-array name="paintings_lang">
@@ -15,6 +16,7 @@
         <item>C# WindForm GUI </item>
         <item>C# WinForm GUI </item>
         <item>C++, C# WinForm GUI </item>
+        <item>Android Java, XML</item>
     </string-array>
 
     <string-array name="paintings_description">
@@ -23,15 +25,16 @@
         <item>Image processing software for automatically detect object boundary similar to Adobe Photoshop’s Magnetic Lasso tool. Applied for graph algorithms, construction and image processing concept practicing.</item>
         <item>Using socket programing and multithreading for connecting two or more player’s laptop to each other and play a synchronized fully functional game.</item>
         <item>Used files to store the data \n Used the most concept of OOP and some design pattern.</item>
+        <item>Simple android app with only one room for all users to chat. Implemented as a practice of using firebase as a backend. Real time firebase database and firebase cloud storage for store images. User are Authenticated with firebase.</item>
     </string-array>
 
-    <!--TODO remove pics from drawable after finsh add and comple floadablelayout libs-->
     <array name="paintings_images">
         <item>@drawable/gp_deliverbot</item>
         <item>@drawable/gp_robot</item>
         <item>@drawable/lasso_tool_mycv</item>
         <item>@drawable/snack_and_ladder_mycv</item>
         <item>@drawable/library_mangment_system</item>
+        <item>@drawable/friendly_chat_mycv</item>
     </array>
 
 </resources>

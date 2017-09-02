@@ -5,8 +5,10 @@ import android.content.res.TypedArray;
 
 import com.samer.kador.mycv.R;
 
+import java.io.Serializable;
 
-public class Painting {
+
+public class ProjectModel implements Serializable{
 
     private final int imageId;
     private final String title;
@@ -15,7 +17,7 @@ public class Painting {
     private final String description;
 
 
-    private Painting(int imageId, String title, String lang, String description) {
+    private ProjectModel(int imageId, String title, String lang, String description) {
         this.imageId = imageId;
         this.title = title;
         this.lang = lang;
@@ -39,7 +41,7 @@ public class Painting {
         return description;
     }
 
-    public static Painting[] getAllPaintings(Resources res) {
+    public static ProjectModel[] getAllProjects(Resources res) {
 
         String[] titles = res.getStringArray(R.array.paintings_titles);
         String[] langs = res.getStringArray(R.array.paintings_lang);
@@ -47,16 +49,16 @@ public class Painting {
         TypedArray images = res.obtainTypedArray(R.array.paintings_images);
 
         int size = titles.length;
-        Painting[] paintings = new Painting[size];
+        ProjectModel[] projectModels = new ProjectModel[size];
 
         for (int i = 0; i < size; i++) {
             final int imageId = images.getResourceId(i, -1);
-            paintings[i] = new Painting(imageId, titles[i], langs[i], descriptions[i]);
+            projectModels[i] = new ProjectModel(imageId, titles[i], langs[i], descriptions[i]);
         }
 
         images.recycle();
 
-        return paintings;
+        return projectModels;
     }
 
 }

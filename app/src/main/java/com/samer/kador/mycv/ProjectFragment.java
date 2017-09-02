@@ -14,8 +14,8 @@ import android.widget.ListView;
 
 import com.alexvasilkov.foldablelayout.UnfoldableView;
 import com.alexvasilkov.foldablelayout.shading.GlanceFoldShading;
-import com.samer.kador.mycv.model.Painting;
-import com.samer.kador.mycv.items.PaintingsAdapter;
+import com.samer.kador.mycv.model.ProjectModel;
+import com.samer.kador.mycv.items.ProjectsAdapter;
 
 
 /**
@@ -49,7 +49,7 @@ public class ProjectFragment extends Fragment {
     //    ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ListView listView = $(R.id.list_view);
-        listView.setAdapter(new PaintingsAdapter(getActivity() , this));
+        listView.setAdapter(new ProjectsAdapter(getActivity() , this));
 
         listTouchInterceptor = $(R.id.touch_interceptor_view);
         listTouchInterceptor.setClickable(false);
@@ -93,10 +93,13 @@ public class ProjectFragment extends Fragment {
     }
 
 
-    public void openDetails(View coverView, Painting painting) {
+    public void openDetails(View coverView, ProjectModel projectModel) {
 
-        DetailsFragment fragment = new DetailsFragment(painting);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("projectModel", projectModel);
 
+        DetailsFragment fragment = new DetailsFragment();
+        fragment.setArguments(bundle);
         FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction()
                 .replace(R.id.details_layout, fragment);
         fragmentTransaction.commitAllowingStateLoss();

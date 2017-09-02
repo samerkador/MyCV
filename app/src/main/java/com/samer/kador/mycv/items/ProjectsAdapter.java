@@ -12,19 +12,19 @@ import com.alexvasilkov.android.commons.ui.Views;
 
 import com.samer.kador.mycv.ProjectFragment;
 import com.samer.kador.mycv.R;
-import com.samer.kador.mycv.model.Painting;
+import com.samer.kador.mycv.model.ProjectModel;
 import com.samer.kador.mycv.utils.GlideHelper;
 
 import java.util.Arrays;
 
-public class PaintingsAdapter extends ItemsAdapter<Painting, PaintingsAdapter.ViewHolder>
+public class ProjectsAdapter extends ItemsAdapter<ProjectModel, ProjectsAdapter.ViewHolder>
         implements View.OnClickListener {
  private Fragment fragment;
 
 
-    public PaintingsAdapter(Context context , Fragment fragment) {
+    public ProjectsAdapter(Context context , Fragment fragment) {
         this.fragment = fragment;
-        setItemsList(Arrays.asList(Painting.getAllPaintings(context.getResources())));
+        setItemsList(Arrays.asList(ProjectModel.getAllProjects(context.getResources())));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class PaintingsAdapter extends ItemsAdapter<Painting, PaintingsAdapter.Vi
 
     @Override
     protected void onBindHolder(ViewHolder holder, int position) {
-        final Painting item = getItem(position);
+        final ProjectModel item = getItem(position);
 
         holder.image.setTag(R.id.list_item_image, item);
         GlideHelper.loadPaintingImage(holder.image, item);
@@ -46,7 +46,7 @@ public class PaintingsAdapter extends ItemsAdapter<Painting, PaintingsAdapter.Vi
     @Override
     public void onClick(View view) {
 
-        final Painting item = (Painting) view.getTag(R.id.list_item_image);
+        final ProjectModel item = (ProjectModel) view.getTag(R.id.list_item_image);
         ((ProjectFragment)fragment).openDetails(view, item);
 
     }

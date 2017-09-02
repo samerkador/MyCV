@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alexvasilkov.android.commons.texts.SpannableBuilder;
-import com.samer.kador.mycv.model.Painting;
+import com.samer.kador.mycv.model.ProjectModel;
 import com.samer.kador.mycv.utils.GlideHelper;
 
 
@@ -21,21 +21,26 @@ import com.samer.kador.mycv.utils.GlideHelper;
 public class DetailsFragment extends Fragment {
 
 
-    Painting painting;
+    ProjectModel projectModel;
 
 
     public DetailsFragment() {
 
     }
 
-    public DetailsFragment(Painting painting) {
-       this.painting = painting;
-    }
+//    public DetailsFragment(ProjectModel projectModel) {
+//       this.projectModel = projectModel;
+//    }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
+        if (getArguments() != null)
+        projectModel = (ProjectModel) getArguments().getSerializable("projectModel");
 
 
         View view =inflater.inflate(R.layout.fragment_project_details, container, false);
@@ -46,8 +51,8 @@ public class DetailsFragment extends Fragment {
         final TextView text = (TextView) view.findViewById(R.id.details_text);
 
 
-        GlideHelper.loadPaintingImage(image, painting);
-        title.setText(painting.getTitle());
+        GlideHelper.loadPaintingImage(image, projectModel);
+        title.setText(projectModel.getTitle());
 
 
         SpannableBuilder builder = new SpannableBuilder(getActivity());
@@ -55,7 +60,7 @@ public class DetailsFragment extends Fragment {
                 .createStyle().setFont(Typeface.DEFAULT_BOLD).apply()
                 .append("Implemented using: ")
                 .clearStyle()
-                .append(painting.getLang());
+                .append(projectModel.getLang());
          lang.setText(builder.build());
 
 
@@ -64,7 +69,7 @@ public class DetailsFragment extends Fragment {
         builder
                 .createStyle().setFont(Typeface.DEFAULT_BOLD).apply()
                 .clearStyle()
-                .append(painting.getDescription());
+                .append(projectModel.getDescription());
         text.setText(builder.build());
 
         return view;

@@ -32,8 +32,9 @@ public class ListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
-        int arrayIndex=getArguments().getInt("index");
+        int arrayIndex = 0;
+        if (getArguments() != null)
+            arrayIndex=getArguments().getInt("index");
 
         view = inflater.inflate(R.layout.fragment_list, container, false);
 

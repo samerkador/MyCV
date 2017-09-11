@@ -28,7 +28,7 @@ You can download a `.apk` from GitHub's [releases page](https://github.com/samer
 
 ``` My CV ``` requires a minimum SDK version of 16 Jelly Bean.
 
-### Using to build ```MyCV```
+### Used in building ```MyCV```
 
 - [coolMenu](https://github.com/DxTT/coolMenu) to navigatation through UIs.
 - [funky header](https://github.com/IntruderShanky/Frisson) to provide Funky cuts on image in personal UI.

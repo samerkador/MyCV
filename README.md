@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/samerkador/MyCV">
-      <img src ="https://github.com/samerkador/MyCV/blob/master/app/src/main/res/drawable/cv_logo_me_mycv_croped.png" alt="Devlight" height="150" width="150" alt="MyCV"/>
+      <img src ="https://github.com/samerkador/MyCV/blob/master/app/src/main/res/drawable/cv_logo_me_mycv_croped.png" alt="MycvLogo" height="150" width="150" alt="MyCV"/>
   </a>
 </p>
 <br/>
